@@ -1,6 +1,6 @@
 # Aura Agent 🚀
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/aura-agent?referralCode=alias)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/danmarauda/aura-agent)
 
 Expert AI agent for full automation of [Aura.build](https://www.aura.build) - the AI website builder platform.
 
