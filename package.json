@@ -1,0 +1,62 @@
+{
+  "name": "aura-agent",
+  "version": "1.0.0",
+  "description": "Expert AI agent for full automation of Aura.build - hybrid API + browser automation system",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "aura": "./dist/cli.js",
+    "aura-agent": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx watch src/cli.ts",
+    "dev:server": "tsx watch src/server.ts",
+    "build": "tsup src/cli.ts src/index.ts src/server.ts --format esm --dts --clean",
+    "start": "node dist/cli.js",
+    "start:server": "node dist/server.js",
+    "serve": "MODE=server node dist/server.js",
+    "intercept": "python3 scripts/api_interceptor.py",
+    "lux": "python3 src/agents/lux_agent.py",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "docker:build": "docker build -t aura-agent .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env aura-agent"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "axios": "^1.7.9",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "conf": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "inquirer": "^12.4.2",
+    "ora": "^8.2.0",
+    "playwright": "^1.50.1",
+    "puppeteer": "^24.2.1",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.12.0",
+    "@types/ws": "^8.5.14",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "aura.build",
+    "ai-agent",
+    "browser-automation",
+    "lux",
+    "computer-use",
+    "mcp"
+  ],
+  "author": "alias",
+  "license": "MIT"
+}

@@ -1,0 +1,23 @@
+# =============================================================================
+# Aura Agent - Railway Configuration
+# Expert AI agent for Aura.build automation
+# =============================================================================
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "./Dockerfile"
+watchPatterns = ["src/**", "scripts/**", "package.json", "Dockerfile"]
+
+[deploy]
+startCommand = "MODE=server node dist/server.js"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+
+# Environment-specific overrides
+[environments.production.deploy]
+numReplicas = 1
+
+[environments.staging.deploy]
+numReplicas = 1

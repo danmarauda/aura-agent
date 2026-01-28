@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+.turbo/
+
+# API Interception output
+api_endpoints.json
+*_client.ts
+
+# Screenshots and temp files
+/tmp/
+*.png
+*.jpg
+!src/**/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.eggs/
+*.egg-info/
+.venv/
+venv/
