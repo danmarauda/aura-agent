@@ -9,7 +9,7 @@ dockerfilePath = "./Dockerfile"
 watchPatterns = ["src/**", "scripts/**", "package.json", "Dockerfile"]
 
 [deploy]
-startCommand = "MODE=server node dist/server.js"
+startCommand = "/app/entrypoint.sh"
 healthcheckPath = "/health"
 healthcheckTimeout = 30
 restartPolicyType = "ON_FAILURE"
